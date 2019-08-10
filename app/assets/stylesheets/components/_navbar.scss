@@ -1,0 +1,19 @@
+.navbar {
+  justify-content: space-between;
+  background: white;
+  flex-grow: 0;
+  height: 50px;
+}
+
+.home {
+ padding: 7px 17px;
+ border: 1px solid #663399;
+ color: #663399;
+ border-radius: 15px;
+ opacity: 0.8;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}

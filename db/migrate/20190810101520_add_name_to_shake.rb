@@ -1,0 +1,5 @@
+class AddNameToShake < ActiveRecord::Migration[5.2]
+  def change
+    add_column :shakes, :name, :string
+  end
+end
