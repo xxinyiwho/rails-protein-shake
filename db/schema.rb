@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_10_103347) do
+ActiveRecord::Schema.define(version: 2019_08_10_133352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_08_10_103347) do
     t.bigint "shake_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "quantity"
     t.index ["ingredient_id"], name: "index_doses_on_ingredient_id"
     t.index ["shake_id"], name: "index_doses_on_shake_id"
   end
@@ -34,6 +35,7 @@ ActiveRecord::Schema.define(version: 2019_08_10_103347) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.string "photo"
   end
 
   add_foreign_key "doses", "ingredients"

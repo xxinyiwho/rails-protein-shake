@@ -1,0 +1,30 @@
+.card-category {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+}
+
+.card {
+  height: 80px;
+  border: transparent;
+  padding: 10px;
+}
+
+.card-text {
+  color: #046CE8;
+  font-size: 20px;
+  padding-top: 10px;
+  &:hover {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  }
+}
+
+.dose {
+  width: 300px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+  padding-top: 20px;
+  padding-left: 10px;
+}
+

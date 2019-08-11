@@ -1,0 +1,8 @@
+<div class="container">
+  <h2>Add dose</h2>
+  <%= simple_form_for [@shake, @dose] do |f| %>
+  <%= f.input :quantity %>
+  <%= f.association :ingredient%>
+  <%= f.submit "Add to your recipe", class: "btn btn-primary" %>
+  <% end %>
+</div>

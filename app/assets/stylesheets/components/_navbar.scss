@@ -1,19 +1,17 @@
 .navbar {
+  width: 100%;
+  text-align: center;
+  display:flex;
   justify-content: space-between;
-  background: white;
-  flex-grow: 0;
-  height: 50px;
 }
 
-.home {
- padding: 7px 17px;
- border: 1px solid #663399;
- color: #663399;
- border-radius: 15px;
- opacity: 0.8;
+.header {
+  background-image: url("https://images.unsplash.com/photo-1518310952931-b1de897abd40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80");
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
-a {
-  text-decoration: none;
-  display: inline-block;
-}
+

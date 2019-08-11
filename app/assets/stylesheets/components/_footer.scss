@@ -1,0 +1,31 @@
+.footer {
+  margin-top: 40px;
+  background-color: #2c2b2b;
+  padding: 20px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+  display: inline;
+ }
+
+.footer p {
+  text-align: center;
+  color: #F4F4F4;
+}
+
+.footer a {
+  color: #F4F4F4;
+  font-size: 30px;
+  padding: 5px;
+  text-align:center;
+}

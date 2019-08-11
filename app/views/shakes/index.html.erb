@@ -1,11 +1,40 @@
-<div class="navbar">
-  <a href="home" class="home">Home</a>
-  <a href="add" class="add">Add your shake</a>
-</div>
+<div class="header">
+  <div class="navbar sticky-top">
+
+      <%= link_to "Home", root_path, class: "btn btn-light" %>
+      <%= link_to "Create your recipe", new_shake_path, class: "btn btn-primary" %>
+
+  </div>
 
 <div class="banner">
   <div class="container">
-    <h1>Daily shake guide</h1>
-    <p>Feed your body, feed your muscle</p>
+    <h1>Daily protein shake recipe</h1>
+    <p>Fuel up!</p>
   </div>
+</div>
+</div>
+
+<div class="container">
+  <div class="card-category">
+    <% @shakes.each do |shake| %>
+    <div class="card">
+      <h3><%= link_to shake.name, shake_path(shake), class: 'card-text' %></h3>
+      <%= link_to shake_path(shake), method: :delete, data: { confirm: "Are you sure?" } do %>
+      <i class="fa fa-trash destroy_dose"></i>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="footer">
+  <ul>
+    <li><a href="#">
+      <i class="fab fa-linkedin-in"></i></a></li>
+    <li><a href="#">
+      <i class="fab fa-twitter"></i></a></li>
+    <li><a href="#">
+      <i class="fab fa-github"></i></a></li>
+  </ul>
+  <p>Sharing is loving! Share your shake</p>
 </div>
