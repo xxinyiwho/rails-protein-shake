@@ -1,6 +1,6 @@
 
 <div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-url('<%= cl_image_path @shake.photo, height: 800, width: 1080, crop: :fill %>')">
+url('<%= cl_image_path @shake.photo.url, height: 800, width: 1080, crop: :fill %>')">
 
 <div class="navbar sticky-top">
   <%= link_to "Home", root_path, class: "btn btn-light" %>
