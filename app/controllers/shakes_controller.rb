@@ -16,7 +16,7 @@ class ShakesController < ApplicationController
     if @shake.save
       redirect_to shake_path(@shake)
     else
-      reder :new
+      render :new
     end
   end
 
