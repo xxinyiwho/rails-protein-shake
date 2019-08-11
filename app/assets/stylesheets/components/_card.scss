@@ -28,3 +28,14 @@
   padding-left: 10px;
 }
 
+@media(max-width: 992px) {
+  .card-category {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .card-category {
+    grid-template-columns: 1fr;
+  }
+}
