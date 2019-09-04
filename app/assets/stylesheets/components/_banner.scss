@@ -1,12 +1,16 @@
 .banner {
   color: white;
-  text-shadow: 0px 1px 0px #000000;
-  align-items: center;
-  margin-bottom: 230px;
+  background-image: url("https://images.unsplash.com/photo-1518310952931-b1de897abd40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80");
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 80px;
+  width: 100%;
  h1 {
-  padding-top: 160px;
+  padding-top: 250px;
 }
  }
+
 
 .banner-show {
   height: 500px;
@@ -40,3 +44,4 @@
     grid-template-columns: 1fr;
   }
 }
+

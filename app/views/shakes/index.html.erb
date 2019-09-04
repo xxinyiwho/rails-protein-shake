@@ -1,19 +1,13 @@
-<div class="header">
-  <div class="navbar sticky-top">
-
-    <%= link_to "Home", root_path, class: "btn btn-light" %>
-    <%= link_to "Create your recipe", new_shake_path, class: "btn btn-primary" %>
-
-  </div>
+<div class="banner">
 
   <div class="container">
-    <div class="banner">
-      <h1>Daily protein shake recipe</h1>
-      <p>A shake a day, keep the doctor away.</p>
 
-    </div>
+    <h1>Daily protein shake recipe</h1>
+    <p>A shake a day, keep the doctor away.</p>
+  </div>
+</div>
 
-
+  <div class="container">
     <div class="card-category">
       <% @shakes.each do |shake| %>
       <div class="card">
@@ -26,14 +20,18 @@
     </div>
   </div>
 
-  <div class="footer">
-    <ul>
-      <li><a href="#">
-        <i class="fab fa-linkedin-in"></i></a></li>
-        <li><a href="#">
-          <i class="fab fa-twitter"></i></a></li>
-          <li><a href="#">
-            <i class="fab fa-github"></i></a></li>
-          </ul>
-          <p>Sharing is loving! Share your shake</p>
-        </div>
+
+<div class="footer">
+  <ul>
+    <li><a href="#">
+      <i class="fab fa-linkedin-in"></i></a>
+    </li>
+    <li><a href="#">
+      <i class="fab fa-twitter"></i></a>
+    </li>
+    <li><a href="#">
+      <i class="fab fa-github"></i></a>
+    </li>
+  </ul>
+  <p>Sharing is loving! Share your shake</p>
+</div>
