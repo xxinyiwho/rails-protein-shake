@@ -1,3 +1,18 @@
 <div class="banner-home">
-  <img src="https://images.unsplash.com/photo-1558017487-06bf9f82613a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1005&q=80" alt="">
+  <div class="search">
+    <li>
+      <%= form_tag shakes_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+        placeholder: "Find your shake recipe"
+        %>
+    </li>
+    <li>
+      <button type="submit">
+        <i class="fas fa-search"></i>
+      </button>
+    </li>
+    <% end %>
+  </div>
 </div>

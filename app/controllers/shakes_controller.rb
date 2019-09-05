@@ -1,6 +1,13 @@
 class ShakesController < ApplicationController
   def index
-    @shakes = Shake.all
+   if params[:query].present?
+      sql_query = " \
+        shakes.name @@ :query \
+      "
+      @shakes = Shake.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @shakes = Shake.all
+    end
   end
 
   def show
