@@ -1,11 +1,13 @@
+
+<% if current_page?("/") %>
+<% else %>
 <div class="navbar">
-
-    <li><%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "https://cdn2.iconfinder.com/data/icons/bubble-milk-tea/500/bubble-tea-drink_17-512.png" %>
-      <% end %>
-    </li>
-
-<li>
-  <i class="fas fa-bars"></i>
-</li>
+  <li><%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "https://cdn2.iconfinder.com/data/icons/bubble-milk-tea/500/bubble-tea-drink_17-512.png" %>
+    <% end %>
+  </li>
+  <li>
+    <i class="fas fa-bars"></i>
+  </li>
 </div>
+<% end %>

@@ -1,4 +1,16 @@
 class DosesController < ApplicationController
+  # def index
+  #   if params[:query].present?
+  #     sql_query = " \
+  #       shakes.name @@ :query \
+  #       OR ingredients.name @@ :query \
+  #     "
+  #     @doses = Dose.joins(:shake).where(sql_query, query: "%#{params[:query]}%")
+  #   else
+  #     @doses = Dose.all
+  #   end
+  # end
+
   def new
     @shake = Shake.find(params[:shake_id])
     @dose = Dose.new
