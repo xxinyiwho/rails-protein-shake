@@ -6,7 +6,11 @@
       <% end %>
     </li>
     <li>
-      <i class="fas fa-bars"></i>
+      <% if current_user %>
+      <p>welcome</p>
+      <% else %>
+      <%= link_to "Sign in", new_user_session_path  %>
+      <% end %>
     </li>
   </div>
   <% end %>
