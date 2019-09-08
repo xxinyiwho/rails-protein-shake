@@ -34,10 +34,10 @@ class ShakesController < ApplicationController
   end
 
   def destroy
+    authorize @shake
     @shake = Shake.find(params[:id])
     @shake.destroy
     redirect_to root_path
-    authorize @shake
   end
 
   def shake_strong_params

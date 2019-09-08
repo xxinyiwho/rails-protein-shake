@@ -21,15 +21,23 @@ class ShakePolicy < ApplicationPolicy
     true
   end
 
-  def update?
-    record.user == user
+  def edit?
+    # how can i check if the user is the owner?
+    # restaurant.user == current_user
+    # record correspond to the object that authorize is called on.
+    # user corrosponds to current_user
+    owner_or_admin
   end
 
-  def edit?
-    true
+  def update?
+    owner_or_admin
   end
 
   def destroy?
-    record.user == user
+    owner_or_admin
+  end
+
+  def owner_or_admin
+    record.user == user || user.admin
   end
 end
