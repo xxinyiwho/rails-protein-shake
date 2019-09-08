@@ -12,8 +12,10 @@
       <% @shakes.each do |shake| %>
       <div class="card">
         <h3><%= link_to shake.name, shake_path(shake), class: 'card-text' %></h3>
+        <% if policy(shake).destroy? %>
         <%= link_to shake_path(shake), method: :delete, data: { confirm: "Are you sure?" } do %>
         <i class="fa fa-trash destroy_dose"></i>
+        <% end %>
         <% end %>
       </div>
       <% end %>
