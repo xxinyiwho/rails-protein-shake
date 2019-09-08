@@ -1,4 +1,4 @@
-class ShakePolicy < ApplicationPolicy
+class DosePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -22,7 +22,7 @@ class ShakePolicy < ApplicationPolicy
   end
 
   def update?
-    record.user == user
+    true
   end
 
   def edit?
@@ -30,6 +30,6 @@ class ShakePolicy < ApplicationPolicy
   end
 
   def destroy?
-    record.user == user
+    true
   end
 end

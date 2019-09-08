@@ -14,6 +14,7 @@ class DosesController < ApplicationController
   def new
     @shake = Shake.find(params[:shake_id])
     @dose = Dose.new
+    authorize @dose
   end
 
   def create
@@ -25,12 +26,14 @@ class DosesController < ApplicationController
     else
       render :new
     end
+    authorize @dose
   end
 
   def destroy
     @dose = Dose.find(params[:id])
     @dose.destroy
     redirect_to shake_path(@dose.shake)
+    authorize @dose
   end
 
   def dose_strong_params
