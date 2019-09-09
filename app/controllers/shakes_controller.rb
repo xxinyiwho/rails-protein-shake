@@ -1,5 +1,6 @@
 class ShakesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @shakes = policy_scope(Shake)
    if params[:query].present?
