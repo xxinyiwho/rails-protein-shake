@@ -26,12 +26,12 @@ class ShakesController < ApplicationController
 
   def create
     @shake = Shake.new(shake_strong_params)
+    authorize @shake
     if @shake.save
       redirect_to shake_path(@shake)
     else
       render :new
     end
-    authorize @shake
   end
 
   def destroy
