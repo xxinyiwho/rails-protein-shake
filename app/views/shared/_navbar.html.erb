@@ -7,7 +7,7 @@
     </li>
     <li>
       <% if current_user %>
-      <% if policy(Shake).create? %>
+      <% if policy(Shake).new? %>
       <%= link_to "New recipe", new_shake_path %>
       <% end %>
       <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
