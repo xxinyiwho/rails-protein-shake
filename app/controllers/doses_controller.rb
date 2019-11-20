@@ -30,10 +30,10 @@ class DosesController < ApplicationController
   end
 
   def destroy
+    authorize @dose
     @dose = Dose.find(params[:id])
     @dose.destroy
     redirect_to shake_path(@dose.shake)
-    authorize @dose
   end
 
   def dose_strong_params
